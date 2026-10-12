@@ -1,0 +1,275 @@
+/* ============================================
+   NOSOTROS PAGE STYLES
+   ============================================ */
+
+.nosotros-historia {
+  background-color: var(--color-ivory);
+}
+
+.nosotros-historia__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.nosotros-historia__grid--full {
+  grid-template-columns: 1fr;
+}
+
+.nosotros-historia__content p {
+  color: var(--color-slate-500);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.nosotros-historia__stats {
+  display: flex;
+  gap: var(--space-3xl);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-slate-100);
+}
+
+.nosotros-historia__stat span {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  display: block;
+  line-height: 1;
+}
+
+.nosotros-historia__stat p {
+  font-size: var(--text-xs);
+  color: var(--color-slate-400);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: var(--space-sm) 0 0;
+}
+
+.nosotros-historia__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.nosotros-historia__images img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.nosotros-historia__images img:first-child {
+  margin-top: var(--space-2xl);
+}
+
+/* Filosofía */
+.nosotros-filosofia {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-slate-900) 0%, #2A241E 100%);
+  padding: var(--space-5xl) 0;
+  overflow: hidden;
+}
+
+.nosotros-filosofia__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(201, 169, 110, 0.12) 0%, transparent 60%);
+}
+
+.nosotros-filosofia .container {
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-filosofia .section__subtitle {
+  color: var(--color-gold);
+}
+
+.nosotros-filosofia .section__title {
+  color: var(--color-ivory);
+}
+
+.nosotros-filosofia .section__description {
+  color: var(--color-slate-300);
+}
+
+.nosotros-filosofia__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+  margin-top: var(--space-3xl);
+}
+
+.nosotros-pilar {
+  padding: var(--space-2xl);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: var(--border-radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all var(--transition-base);
+}
+
+.nosotros-pilar:hover {
+  border-color: rgba(201, 169, 110, 0.5);
+  transform: translateY(-4px);
+}
+
+.nosotros-pilar__numero {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.nosotros-pilar__titulo {
+  font-size: var(--text-xl);
+  color: var(--color-ivory);
+  margin-bottom: var(--space-md);
+}
+
+.nosotros-pilar__descripcion {
+  color: var(--color-slate-300);
+  font-weight: 300;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+/* Equipo */
+.nosotros-equipo {
+  background-color: var(--color-ivory);
+}
+
+.nosotros-equipo__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xl);
+}
+
+.nosotros-miembro {
+  text-align: center;
+}
+
+.nosotros-miembro__foto-wrap {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.nosotros-miembro:hover .nosotros-miembro__foto-wrap {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.nosotros-miembro__foto {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.nosotros-miembro:hover .nosotros-miembro__foto {
+  transform: scale(1.05);
+}
+
+.nosotros-miembro__nombre {
+  font-size: var(--text-xl);
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-xs);
+}
+
+.nosotros-miembro__cargo {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.nosotros-miembro__bio {
+  font-size: var(--text-sm);
+  color: var(--color-slate-500);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Atención personalizada */
+.nosotros-atencion {
+  background-color: var(--color-ivory-warm);
+}
+
+.nosotros-atencion__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nosotros-atencion__text {
+  color: var(--color-slate-500);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: var(--space-2xl);
+}
+
+.nosotros-atencion__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .nosotros-historia__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .nosotros-historia__images {
+    max-width: 700px;
+  }
+
+  .nosotros-equipo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-historia__images img {
+    height: 300px;
+  }
+
+  .nosotros-filosofia__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-historia__stats {
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros-equipo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-historia__images {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-historia__images img:first-child {
+    margin-top: 0;
+  }
+}

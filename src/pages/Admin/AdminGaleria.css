@@ -1,0 +1,313 @@
+/* ============================================
+   ADMIN GALERIA - ESTILOS ELEGANTES
+   ============================================ */
+
+.admin-galeria-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Banner de configuración Supabase */
+.admin-supabase-banner {
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.12), rgba(201, 169, 110, 0.05));
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.admin-supabase-banner__icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.admin-supabase-banner__content h4 {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+}
+
+.admin-supabase-banner__content p {
+  font-size: var(--text-xs);
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.admin-supabase-banner__content code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Barra de herramientas / Búsqueda y Filtros */
+.admin-galeria-toolbar {
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-100);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-galeria-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-ivory);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--border-radius-sm);
+  padding: 8px 12px;
+  min-width: 260px;
+  flex: 1;
+}
+
+.admin-galeria-search input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: var(--text-sm);
+  width: 100%;
+  color: var(--color-slate-800);
+  font-family: var(--font-body);
+}
+
+.admin-galeria-filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.admin-galeria-filter-select {
+  padding: 8px 14px;
+  background: var(--color-ivory);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  color: var(--color-slate-700);
+  font-family: var(--font-body);
+  outline: none;
+  cursor: pointer;
+}
+
+.admin-galeria-counter {
+  font-size: var(--text-xs);
+  color: var(--color-slate-400);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Tarjetas de Galería en Admin */
+.admin-galeria-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-slate-100);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.admin-galeria-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.admin-galeria-card__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--color-slate-900);
+}
+
+.admin-galeria-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.admin-galeria-card:hover .admin-galeria-card__image {
+  transform: scale(1.04);
+}
+
+.admin-galeria-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(18, 16, 15, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--color-gold);
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.admin-galeria-card__body {
+  padding: var(--space-md) var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-galeria-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--color-slate-900);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.admin-galeria-card__desc {
+  font-size: var(--text-xs);
+  color: var(--color-slate-500);
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.admin-galeria-card__date {
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-top: auto;
+}
+
+.admin-galeria-card__actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg) var(--space-md);
+  border-top: 1px solid var(--color-slate-100);
+}
+
+.admin-galeria-card__actions .admin-btn {
+  flex: 1;
+  justify-content: center;
+  padding: 7px 10px;
+}
+
+/* Área de subida y vista previa de archivo en modal */
+.admin-upload-dropzone {
+  border: 2px dashed var(--color-slate-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+  background: var(--color-ivory);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.admin-upload-dropzone:hover {
+  border-color: var(--color-gold);
+  background: rgba(201, 169, 110, 0.05);
+}
+
+.admin-upload-dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-upload-preview {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  max-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-slate-900);
+  border: 1px solid var(--color-slate-200);
+}
+
+.admin-upload-preview img {
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.admin-upload-preview__overlay {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: var(--text-xs);
+}
+
+.admin-upload-preview__remove {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background var(--transition-fast);
+}
+
+.admin-upload-preview__remove:hover {
+  background: var(--color-error);
+}
+
+/* Modal de confirmación de eliminación */
+.admin-delete-confirm {
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.admin-delete-confirm__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(196, 112, 112, 0.15);
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+}
+
+.admin-delete-confirm__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-sm);
+}
+
+.admin-delete-confirm__text {
+  font-size: var(--text-sm);
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}

@@ -1,0 +1,167 @@
+/* ============================================
+   CONTACTO PAGE STYLES
+   ============================================ */
+
+/* Contact cards */
+.contacto-tarjetas {
+  background-color: var(--color-ivory);
+}
+
+.contacto-tarjetas__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xl);
+}
+
+.contacto-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-100);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+a.contacto-tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.contacto-tarjeta__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: var(--color-gold-dark);
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  margin-bottom: var(--space-lg);
+}
+
+.contacto-tarjeta__titulo {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-sm);
+}
+
+.contacto-tarjeta__contenido {
+  font-size: var(--text-sm);
+  color: var(--color-slate-500);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.contacto-tarjeta__horario {
+  display: block;
+}
+
+/* Redes + WhatsApp */
+.contacto-canales {
+  background-color: var(--color-ivory-warm);
+}
+
+.contacto-canales__inner {
+  text-align: center;
+}
+
+.contacto-canales__title {
+  margin-bottom: var(--space-md);
+}
+
+.contacto-canales__text {
+  color: var(--color-slate-500);
+  font-weight: 300;
+  margin-bottom: var(--space-2xl);
+}
+
+.contacto-canales__actions {
+  margin-bottom: var(--space-3xl);
+}
+
+.contacto-canales__social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.contacto-canales__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  border-radius: 100px;
+  color: var(--color-slate-600);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all var(--transition-base);
+}
+
+.contacto-canales__social-link:hover {
+  color: var(--color-gold-dark);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Mapa */
+.contacto-mapa {
+  background-color: var(--color-ivory);
+}
+
+.contacto-mapa__frame {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+  filter: grayscale(0.2) contrast(1.02);
+}
+
+/* CTA final */
+.contacto-cta {
+  background-color: var(--color-ivory);
+}
+
+.contacto-cta__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contacto-cta__title {
+  margin-bottom: var(--space-md);
+}
+
+.contacto-cta__text {
+  color: var(--color-slate-500);
+  font-weight: 300;
+  margin-bottom: var(--space-2xl);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .contacto-tarjetas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto-tarjetas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-mapa__frame {
+    height: 320px;
+  }
+}

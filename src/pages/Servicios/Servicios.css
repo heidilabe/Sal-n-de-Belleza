@@ -1,0 +1,557 @@
+/* ===================================================
+   SERVICIOS PAGE - LÍNEA GRÁFICA ELEGANTE, OSCURA Y DORADA
+   =================================================== */
+
+.servicios-page-dark {
+  background-color: #12100E;
+  color: #FAF8F5;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo con sutil resplandor dorado */
+.servicios-page-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===================================================
+   HERO HEADER
+   =================================================== */
+.servicios-hero {
+  position: relative;
+  z-index: 1;
+  padding: calc(var(--nav-height, 80px) + var(--space-3xl, 3rem)) 0 var(--space-2xl, 2rem);
+  text-align: center;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+  background: linear-gradient(180deg, rgba(26, 23, 20, 0.95) 0%, rgba(18, 16, 14, 0.98) 100%);
+}
+
+.servicios-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicios-hero__badge {
+  display: inline-block;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  margin-bottom: 1rem;
+  padding: 0.35rem 1.1rem;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  border-radius: 100px;
+  background: rgba(201, 169, 110, 0.05);
+}
+
+.servicios-hero__title {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #FAF8F5;
+  margin: 0 0 0.8rem;
+  line-height: 1.15;
+}
+
+.servicios-hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.2rem auto;
+  max-width: 280px;
+}
+
+.servicios-hero__divider .divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.5), transparent);
+}
+
+.servicios-hero__divider .divider-diamond {
+  color: #C9A96E;
+  font-size: 0.65rem;
+}
+
+.servicios-hero__subtitle {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  color: #D4BA87;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ===================================================
+   QUICKNAV BAR
+   =================================================== */
+.servicios-quicknav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.servicios-quicknav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(30, 26, 22, 0.8);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: 100px;
+  color: #D0C8BF;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.servicios-quicknav__link .quicknav-num {
+  font-size: 0.7rem;
+  color: #C9A96E;
+  font-weight: 600;
+}
+
+.servicios-quicknav__link:hover {
+  background: rgba(201, 169, 110, 0.15);
+  border-color: #C9A96E;
+  color: #FAF8F5;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   MAIN LIST & CARDS GRID
+   =================================================== */
+.servicios-main-container {
+  position: relative;
+  z-index: 1;
+  padding: 3.5rem 0 5rem;
+}
+
+.servicios-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* ===================================================
+   CATEGORÍA CARD / CONTENEDOR LIMPIO
+   =================================================== */
+.categoria-card {
+  background: linear-gradient(145deg, #1A1714 0%, #15120F 100%);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 16px;
+  padding: 2.5rem 2.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(201, 169, 110, 0.15);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  scroll-margin-top: 100px;
+}
+
+.categoria-card:hover {
+  border-color: rgba(201, 169, 110, 0.45);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(201, 169, 110, 0.08);
+}
+
+/* Header de la tarjeta */
+.categoria-card__header {
+  margin-bottom: 2rem;
+}
+
+.categoria-card__badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.categoria-card__badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #C9A96E;
+  text-transform: uppercase;
+}
+
+.categoria-card__icon {
+  color: #C9A96E;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.categoria-card__title {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+  font-weight: 400;
+  color: #FAF8F5;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.categoria-card__desc {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.92rem;
+  color: #B8AEA2;
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
+}
+
+.categoria-card__sep {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 169, 110, 0.4) 0%, rgba(201, 169, 110, 0.1) 60%, transparent 100%);
+  width: 100%;
+}
+
+/* ===================================================
+   LISTA DE SERVICIOS - FILAS CON PRECIO A LA DERECHA
+   =================================================== */
+.categoria-card__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease, padding 0.2s ease;
+  border-radius: 8px;
+}
+
+.servicio-item-row:last-child {
+  border-bottom: none;
+}
+
+.servicio-item-row:hover {
+  background-color: rgba(201, 169, 110, 0.04);
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.servicio-item-row__main {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.servicio-item-row__info {
+  flex-shrink: 0;
+  max-width: 65%;
+}
+
+.servicio-item-row__name {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #FAF8F5;
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.servicio-item-row__tag {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #C9A96E;
+  background: rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.servicio-item-row__desc {
+  font-size: 0.82rem;
+  color: #9E968E;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Línea punteada conector elegante */
+.servicio-item-row__leader {
+  flex: 1;
+  border-bottom: 1px dashed rgba(201, 169, 110, 0.25);
+  margin-bottom: 0.35rem;
+  min-width: 20px;
+}
+
+/* Contenedor del precio a la derecha */
+.servicio-item-row__price-box {
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.servicio-item-row__price {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #E8D5B5;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 10px rgba(201, 169, 110, 0.15);
+}
+
+.servicio-item-row__price--consult {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #C9A96E;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* Botón de acción al final de la fila */
+.servicio-item-row__action {
+  flex-shrink: 0;
+}
+
+.servicio-item-row__btn {
+  display: inline-block;
+  padding: 0.42rem 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.servicio-item-row__btn--reserva {
+  background: rgba(201, 169, 110, 0.12);
+  color: #C9A96E;
+  border: 1px solid rgba(201, 169, 110, 0.35);
+}
+
+.servicio-item-row__btn--reserva:hover {
+  background: #C9A96E;
+  color: #12100E;
+  border-color: #C9A96E;
+  box-shadow: 0 2px 10px rgba(201, 169, 110, 0.3);
+}
+
+.servicio-item-row__btn--whatsapp {
+  background: rgba(37, 211, 102, 0.08);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.servicio-item-row__btn--whatsapp:hover {
+  background: #25D366;
+  color: #12100E;
+  border-color: #25D366;
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.25);
+}
+
+/* Footer de tarjeta */
+.categoria-card__footer {
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.categoria-card__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #D4BA87;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.categoria-card__cta-btn .cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.categoria-card__cta-btn:hover {
+  color: #FAF8F5;
+}
+
+.categoria-card__cta-btn:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ===================================================
+   BANNER CTA INFERIOR
+   =================================================== */
+.servicios-banner-cta {
+  padding: 3rem 0 6rem;
+}
+
+.servicios-banner-cta__box {
+  background: linear-gradient(135deg, #1E1A16 0%, #171411 100%);
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: 20px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicios-banner-cta__box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+}
+
+.servicios-banner-cta__pre {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  margin-bottom: 0.75rem;
+}
+
+.servicios-banner-cta__title {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 300;
+  color: #FAF8F5;
+  margin: 0 0 1rem;
+}
+
+.servicios-banner-cta__text {
+  font-size: 0.95rem;
+  color: #B8AEA2;
+  max-width: 600px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.7;
+}
+
+.servicios-banner-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.servicios-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.servicios-cta-btn--gold {
+  background: #C9A96E;
+  color: #12100E;
+  border: 1px solid #C9A96E;
+}
+
+.servicios-cta-btn--gold:hover {
+  background: #D4BA87;
+  border-color: #D4BA87;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35);
+}
+
+.servicios-cta-btn--outline {
+  background: transparent;
+  color: #FAF8F5;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.servicios-cta-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #FAF8F5;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN
+   =================================================== */
+@media (max-width: 768px) {
+  .categoria-card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .servicio-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1.1rem 0;
+  }
+
+  .servicio-item-row__main {
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .servicio-item-row__info {
+    max-width: 60%;
+  }
+
+  .servicio-item-row__leader {
+    display: none;
+  }
+
+  .servicio-item-row__action {
+    width: 100%;
+  }
+
+  .servicio-item-row__btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.55rem;
+  }
+
+  .servicios-banner-cta__box {
+    padding: 2.2rem 1.2rem;
+  }
+
+  .servicios-cta-btn {
+    width: 100%;
+  }
+}

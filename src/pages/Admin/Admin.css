@@ -1,0 +1,6 @@
+/* Estilos compartidos para páginas de administración */
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+}

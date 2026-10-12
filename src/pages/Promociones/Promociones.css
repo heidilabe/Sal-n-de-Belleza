@@ -1,0 +1,35 @@
+/* ============================================
+   PROMOCIONES PAGE STYLES
+   ============================================ */
+
+.promociones-grid-section {
+  background-color: var(--color-ivory);
+}
+
+.promociones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+}
+
+.promociones-bottom-cta {
+  text-align: center;
+  margin-top: var(--space-4xl);
+  padding: var(--space-2xl);
+  background: var(--color-ivory-warm);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-slate-100);
+}
+
+.promociones-bottom-cta p {
+  color: var(--color-slate-500);
+  margin-bottom: var(--space-lg);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .promociones-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}

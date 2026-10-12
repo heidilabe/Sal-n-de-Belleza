@@ -1,0 +1,135 @@
+/* ============================================
+   PROMOTION CARD
+   ============================================ */
+
+.promo-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-elegant);
+  animation: fadeInUp 0.6s ease both;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+.promo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(201, 169, 110, 0.5);
+}
+
+.promo-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.promo-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.promo-card:hover .promo-card__image {
+  transform: scale(1.06);
+}
+
+.promo-card__tag {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-slate-900);
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+  border-radius: 2px;
+}
+
+.promo-card__body {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.promo-card__nombre {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.promo-card__descripcion {
+  font-size: var(--text-sm);
+  color: var(--color-slate-500);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  flex: 1;
+  font-weight: 300;
+}
+
+.promo-card__precio-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.promo-card__precio-before {
+  font-size: var(--text-sm);
+  color: var(--color-slate-400);
+  text-decoration: line-through;
+}
+
+.promo-card__precio {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  line-height: 1;
+}
+
+.promo-card__vigencia {
+  font-size: var(--text-xs);
+  color: var(--color-slate-400);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.promo-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+.promo-card__cta:hover {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .promo-card__image-wrapper {
+    height: 200px;
+  }
+}

@@ -1,0 +1,228 @@
+/* ============================================
+   RESERVAS PAGE STYLES
+   ============================================ */
+
+.reservas-section {
+  background-color: var(--color-ivory);
+}
+
+.reservas-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+/* Sidebar */
+.reservas-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-xl));
+}
+
+.reservas-aside__title {
+  font-size: var(--text-2xl);
+  color: var(--color-slate-900);
+}
+
+.reservas-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.reservas-paso {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.reservas-paso__numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+}
+
+.reservas-paso__titulo {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-slate-900);
+  margin-bottom: 4px;
+}
+
+.reservas-paso__descripcion {
+  font-size: var(--text-sm);
+  color: var(--color-slate-500);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Aside cards */
+.reservas-aside__card {
+  padding: var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-100);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.reservas-aside__card-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-slate-900);
+  margin-bottom: var(--space-md);
+}
+
+.reservas-aside__horario {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-slate-600);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px dashed var(--color-slate-100);
+}
+
+.reservas-aside__horario:last-child {
+  border-bottom: none;
+}
+
+.reservas-aside__text {
+  font-size: var(--text-sm);
+  color: var(--color-slate-500);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.reservas-aside__whatsapp {
+  margin-top: var(--space-md);
+  width: 100%;
+}
+
+.reservas-aside__link {
+  color: var(--color-gold-dark);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reservas-aside__link:hover {
+  color: var(--color-gold);
+}
+
+/* Form wrapper */
+.reservas-form-wrap {
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-100);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-3xl);
+}
+
+@media (max-width: 1024px) {
+  .reservas-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .reservas-aside {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .reservas-aside__title {
+    grid-column: 1 / -1;
+  }
+
+  .reservas-pasos {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reservas-form-wrap {
+    padding: var(--space-xl);
+  }
+
+  .reservas-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .reservas-pasos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservas-form-wrap {
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-lg);
+  }
+}
+
+/* ============================================
+   ACCESO ADMINISTRADOR (DISCRETO Y ELEGANTE)
+   ============================================ */
+
+.reservas-admin-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-4xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px dashed rgba(201, 169, 110, 0.25);
+}
+
+.reservas-admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 16px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-slate-600);
+  background: rgba(18, 16, 15, 0.03);
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.reservas-admin-btn svg {
+  color: var(--color-gold);
+  transition: transform var(--transition-fast);
+}
+
+.reservas-admin-btn:hover {
+  background: var(--color-slate-900);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.reservas-admin-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.reservas-admin-btn:active {
+  transform: translateY(0);
+}
